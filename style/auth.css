@@ -1,0 +1,171 @@
+/* ============================================
+   auth.css
+   Styles for register.php and login.php only
+   ============================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #0D0D0D;
+    color: #E8E8E8;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* -----------------------------------------------
+   REGISTER PAGE
+   .register-container  wraps the whole page
+   .register-form       wraps the form fields
+----------------------------------------------- */
+
+.register-container {
+    background: #161616;
+    border: 1px solid #2E2E2E;
+    border-radius: 10px;
+    padding: 2.5rem;
+    width: 100%;
+    max-width: 480px;
+}
+
+.register-container h2 {
+    font-size: 1.6rem;
+    color: #C9A84C;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.register-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+/* -----------------------------------------------
+   LOGIN PAGE
+   .login-container  wraps the whole page
+   .login-form       wraps the form fields
+----------------------------------------------- */
+
+.login-container {
+    background: #161616;
+    border: 1px solid #2E2E2E;
+    border-radius: 10px;
+    padding: 2.5rem;
+    width: 100%;
+    max-width: 400px;
+}
+
+.login-container h2 {
+    font-size: 1.6rem;
+    color: #C9A84C;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+/*from _group both pages*/
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.1rem;
+}
+
+.form-group label {
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: #888;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 6px;
+}
+
+.form-group input {
+    background: #1F1F1F;
+    border: 1px solid #2E2E2E;
+    border-radius: 6px;
+    color: #E8E8E8;
+    padding: 10px 14px;
+    font-size: 0.92rem;
+    font-family: inherit;
+    transition: border-color 0.2s;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #C9A84C;
+}
+
+/* Login page has plain divs not form-group so style those too */
+.login-form div {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.1rem;
+}
+
+.login-form div label {
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: #888;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 6px;
+}
+
+.login-form div input {
+    background: #1F1F1F;
+    border: 1px solid #2E2E2E;
+    border-radius: 6px;
+    color: #E8E8E8;
+    padding: 10px 14px;
+    font-size: 0.92rem;
+    font-family: inherit;
+    transition: border-color 0.2s;
+}
+
+.login-form div input:focus {
+    outline: none;
+    border-color: #C9A84C;
+}
+
+/* Submit button — used in both */
+button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    margin-top: 0.5rem;
+    background: #C9A84C;
+    color: #000;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+button[type="submit"]:hover {
+    background: #E8C97A;
+}
+
+/* Error message */
+p[style*="color:red"] {
+    background: rgba(224, 82, 82, 0.1);
+    border: 1px solid rgba(224, 82, 82, 0.3);
+    color: #E05252 !important;
+    padding: 10px 14px;
+    border-radius: 6px;
+    font-size: 0.88rem;
+    margin-bottom: 1rem;
+}
