@@ -1,0 +1,113 @@
+/* Container */
+.container {
+  max-width: 1000px;
+  margin: 50px auto;
+  padding: 20px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fff;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* Table  */
+.cart-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 30px;
+}
+
+.cart-table th,
+.cart-table td {
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+  color: #333;
+  font-size: 16px;
+  font-weight: 500;
+}
+.qty-input {
+    width: 60px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    text-align: center;
+    font-weight: bold;
+    color: #333;
+}
+
+.cart-table th {
+  background-color: #f8f9fa;
+  color: #555;
+  font-weight: 600;
+}
+
+.cart-table tr:hover {
+  background-color: #fcfcfc;
+}
+
+/*  (Buttons) */
+.btn-danger {
+  background-color: #ff4d4d;
+  color: white;
+  padding: 8px 15px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.btn-danger:hover {
+  background-color: #cc0000;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #28a745;
+  color: white;
+  padding: 12px 25px;
+  text-decoration: none;
+  border-radius: 5px;
+  float: right;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: #218838;
+}
+
+/* Total  */
+.cart-total {
+  text-align: right;
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 20px;
+  color: #333;
+  padding: 10px;
+  border-top: 2px solid #333;
+}
+
+/* Responsive  */
+@media (max-width: 600px) {
+  .cart-table thead {
+    display: none;
+  }
+  .cart-table td {
+    display: block;
+    text-align: right;
+    border-bottom: 1px dashed #ccc;
+  }
+  .cart-table td::before {
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+  }
+}

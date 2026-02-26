@@ -8,10 +8,11 @@ $db = db_connect();
 //header category id  and index page category id
 
 $cat_id = isset($_GET['cat']) ? (int)$_GET['cat'] : 0;
-$categoryIds = [$cat_id]; // Start with the selected category itself
+
 
 
 if ($cat_id > 0) {
+    $categoryIds = [$cat_id]; // Start with the selected category itself
     $selectedCat = $cat_id;
 
 

@@ -73,4 +73,10 @@ function hasPurchased($user_id, $product_id) {
     return $res && $res->num_rows > 0;
 }
 
+function cart(){
+    if (!isset($_SESSION['cart'])) {
+        $_SESSION['cart'] = [];
+    }
+}
+
 ?>
