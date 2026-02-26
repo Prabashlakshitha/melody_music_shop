@@ -38,7 +38,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             
         } else {
             $redirect=$_GET['redirect'] ?? 'customer/dashboard.php';
-            header("Location: $redirect");
+            header("Location: ".$redirect);
             exit();
         }
     } else {

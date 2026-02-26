@@ -79,10 +79,11 @@ $categories = $db->query("SELECT * FROM categories where parent_id IS NULL");
             <div class="feature-name">Featured Products</div>
             <?php if($featured_products-> num_rows >0){
                 while ($product = $featured_products->fetch_assoc()) {
-                    $_SESSION['product'] = $product['category_id'];
+                    include __DIR__ . '/includes/card.php';
+                   
 
                 }
-                include __DIR__ . '/includes/card.php';
+                
                 
 
 
@@ -95,10 +96,11 @@ $categories = $db->query("SELECT * FROM categories where parent_id IS NULL");
             <div class="latest-name">Latest Products</div>
             <?php if($product_results-> num_rows >0){
                 while ($product = $product_results->fetch_assoc()) {
-                    $_SESSION['product'] = $product['category_id'];
+                    include __DIR__ . '/includes/card.php';
+                  
 
                 }
-                include __DIR__ . '/includes/card.php';
+                
                  
 
             }?>
