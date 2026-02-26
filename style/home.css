@@ -1,0 +1,372 @@
+/* ============================================
+   index.css — for index.php and card.php
+   Class names only from your HTML
+   ============================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #0D0D0D;
+    color: #E8E8E8;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* -----------------------------------------------
+   .hero
+   Full width banner section
+----------------------------------------------- */
+.hero {
+    background: linear-gradient(135deg, #0D0D0D 0%, #1a1408 60%, #0D0D0D 100%);
+    border-bottom: 1px solid #2E2E2E;
+    padding: 6rem 2rem;
+    text-align: center;
+}
+
+/* -----------------------------------------------
+   .hero-section
+   Centers the text content inside hero
+----------------------------------------------- */
+.hero-section {
+    max-width: 620px;
+    margin: 0 auto;
+}
+
+.hero-section h1 {
+    font-size: 3rem;
+    font-weight: 900;
+    color: #C9A84C;
+    letter-spacing: 0.04em;
+    margin-bottom: 1.2rem;
+}
+
+.hero-section p {
+    color: #888;
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 2rem;
+}
+
+/* -----------------------------------------------
+   .btn-primary
+   Gold filled button used in hero
+----------------------------------------------- */
+.btn-primary {
+    display: inline-block;
+    padding: 12px 28px;
+    background: #C9A84C;
+    color: #000;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    font-weight: 700;
+    transition: background 0.2s;
+}
+
+.btn-primary:hover {
+    background: #E8C97A;
+}
+
+/* -----------------------------------------------
+   .categories
+   The whole categories section
+----------------------------------------------- */
+.categories {
+    padding: 4rem 2rem;
+}
+
+/* -----------------------------------------------
+   .categorie-section
+   Centers and wraps the category items
+   Note: keeping your spelling 'categorie-section'
+----------------------------------------------- */
+.categorie-section {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.categorie-section h2 {
+    font-size: 1.8rem;
+    color: #E8E8E8;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+/* -----------------------------------------------
+   .category-item
+   Individual category box
+   Uses flex wrap to lay them in a row
+----------------------------------------------- */
+.categorie-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+/* Override for the h2 so it takes full width */
+.categorie-section h2 {
+    width: 100%;
+}
+
+.category-item {
+    background: #161616;
+    border: 1px solid #2E2E2E;
+    border-radius: 8px;
+    padding: 1.5rem 1.2rem;
+    text-align: center;
+    width: 140px;
+    transition: border-color 0.2s, transform 0.2s, background 0.2s;
+}
+
+.category-item:hover {
+    border-color: #C9A84C;
+    background: rgba(201, 168, 76, 0.05);
+    transform: translateY(-3px);
+}
+
+.category-item a {
+    color: #E8E8E8;
+    display: block;
+}
+
+.category-item:hover a {
+    color: #C9A84C;
+}
+
+/* -----------------------------------------------
+   .cat-icon
+   The Font Awesome icon inside category
+----------------------------------------------- */
+.cat-icon {
+    font-size: 2rem;
+    margin-bottom: 0.6rem;
+    color: #C9A84C;
+}
+
+/* -----------------------------------------------
+   .cat-name
+   Category label text
+----------------------------------------------- */
+.cat-name {
+    font-size: 0.82rem;
+    font-weight: 600;
+}
+
+/* -----------------------------------------------
+   .feature-product
+   Featured products section
+----------------------------------------------- */
+.feature-product {
+    padding: 4rem 2rem;
+    background: #111;
+}
+
+/* -----------------------------------------------
+   .feature-name
+   The section heading "Featured Products"
+----------------------------------------------- */
+.feature-name {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #E8E8E8;
+    margin-bottom: 2rem;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* -----------------------------------------------
+   .latest-products
+   Latest products section
+----------------------------------------------- */
+.latest-products {
+    padding: 4rem 2rem;
+}
+
+/* -----------------------------------------------
+   .latest-name
+   The section heading "Latest Products"
+----------------------------------------------- */
+.latest-name {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #E8E8E8;
+    margin-bottom: 2rem;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* -----------------------------------------------
+   Card grid wrapper
+   Wraps all .card-item inside a section
+----------------------------------------------- */
+.feature-product,
+.latest-products {
+    display: block;
+}
+
+.feature-product > .card-item,
+.latest-products > .card-item {
+    display: inline-block;
+}
+
+/* Use a flex wrapper approach */
+.feature-product .feature-name + .card-item,
+.feature-product .feature-name ~ .card-item {
+    display: flex;
+}
+
+/* Simpler — wrap cards in a grid inside each section */
+.feature-product,
+.latest-products {
+    padding: 4rem 2rem;
+}
+
+/* -----------------------------------------------
+   CARD GRID
+   Makes the cards sit in a responsive grid
+   This wraps all the card-item elements
+----------------------------------------------- */
+.feature-product .feature-name ~ *,
+.latest-products .latest-name ~ * {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* -----------------------------------------------
+   .card-item  (your outer div in card.php)
+   Individual product card
+----------------------------------------------- */
+.card-item {
+    background: #161616;
+    border: 1px solid #2E2E2E;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.2s, border-color 0.2s;
+    display: inline-flex;
+    flex-direction: column;
+    width: 220px;
+    margin: 0.5rem;
+    vertical-align: top;
+}
+
+.card-item:hover {
+    transform: translateY(-4px);
+    border-color: rgba(201, 168, 76, 0.4);
+}
+
+/* -----------------------------------------------
+   .card-image
+   Icon area at top of card
+----------------------------------------------- */
+.card-image {
+    background: #1F1F1F;
+    padding: 2rem;
+    text-align: center;
+    font-size: 3rem;
+    color: #C9A84C;
+    border-bottom: 1px solid #2E2E2E;
+}
+
+/* -----------------------------------------------
+   .card-info
+   Text content below the icon
+----------------------------------------------- */
+.card-info {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    flex: 1;
+}
+
+/* -----------------------------------------------
+   .name
+   Product name inside card
+----------------------------------------------- */
+.name {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #E8E8E8;
+    line-height: 1.3;
+}
+
+/* -----------------------------------------------
+   .price
+   Product price inside card
+----------------------------------------------- */
+.price {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #C9A84C;
+}
+/*
+brand*/
+
+.brand {
+    font-size: 0.82rem;
+    font-weight: 600;
+    color:  #C9A84C;
+}
+/* description */
+.description {
+    font-size: 0.75rem;
+    color: #888;
+    line-height: 1.4;
+}
+/* -----------------------------------------------
+   .btn-view
+   View button at bottom of card
+----------------------------------------------- */
+.btn-view {
+    display: block;
+    text-align: center;
+    padding: 8px;
+    background: #C9A84C;
+    color: #000;
+    border-radius: 6px;
+    font-size: 0.82rem;
+    font-weight: 700;
+    margin-top: auto;
+    transition: background 0.2s;
+}
+
+.btn-view:hover {
+    background: #E8C97A;
+}
+
+/* -----------------------------------------------
+   RESPONSIVE
+----------------------------------------------- */
+@media (max-width: 768px) {
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+
+    .category-item {
+        width: 110px;
+        padding: 1rem;
+    }
+
+    .card-item {
+        width: 160px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding: 3rem 1rem;
+    }
+
+    .card-item {
+        width: calc(50% - 1rem);
+    }
+}

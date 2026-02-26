@@ -42,7 +42,9 @@
     <div class="card-info">
         <div class="name"><?= htmlspecialchars($product['name']) ?></div>
         <div class="price">£<?= number_format($product['price'], 2) ?></div>
-        <a href="shop.php?id=<?= $product['category_id'] ?>" class="btn-view">View</a>
+        <div class="brand"><?= htmlspecialchars($product['cat_name']) ?></div>
+        <div class="description"><?= htmlspecialchars($product['description']) ?></div>
+        <a href="cart.php?id=<?= $product['id'] ?>" class="btn-view">cart</a>
     </div>
 
 </div>

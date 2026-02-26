@@ -1,0 +1,80 @@
+/* ============================================
+   shop.css
+   ============================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #0D0D0D;
+    color: #E8E8E8;
+}
+
+a { text-decoration: none; }
+
+/* -----------------------------------------------
+   .shop_container
+   Outer wrapper for the whole shop page
+----------------------------------------------- */
+.shop_container {
+    max-width: 1300px;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+}
+
+/* -----------------------------------------------
+   .shop_header
+   Page title bar — shows category name
+----------------------------------------------- */
+.shop_header {
+    padding-bottom: 1rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid #2E2E2E;
+}
+
+.shop_header h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #E8E8E8;
+}
+
+/* -----------------------------------------------
+   .product-grid
+   Responsive card grid
+----------------------------------------------- */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 1.2rem;
+}
+
+/* -----------------------------------------------
+   Empty state message
+----------------------------------------------- */
+.product-grid p {
+    color: #555;
+    font-size: 0.95rem;
+    grid-column: 1 / -1;   /* spans full width of grid */
+    text-align: center;
+    padding: 4rem 0;
+}
+
+/* -----------------------------------------------
+   RESPONSIVE
+----------------------------------------------- */
+@media (max-width: 600px) {
+    .product-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 0.8rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+}
