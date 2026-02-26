@@ -44,7 +44,7 @@ if($_SERVER['REQUEST_METHOD']===  'POST'){
                 $error = 'Password must be at least 8 characters long and include uppercase letters, lowercase letters, and numbers.';
             } else {
                 //insert the user into database
-                $stmt = $db->prepare("INSERT INTO users (name, email, password, phone, address, code, city, roles) VALUES (?, ?, ?, ?, ?, ?, ?, 'customer')");
+                $stmt = $db->prepare("INSERT INTO users (name, email, password, phone, address,postcode, city ) VALUES (?, ?, ?, ?, ?, ?, ?)");
                 $stmt->bind_param("sssssss", $name, $email, $hashed_password, $phone, $address, $code, $city);
                 
                 if ($stmt->execute()) {

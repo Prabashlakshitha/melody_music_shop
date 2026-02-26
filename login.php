@@ -28,7 +28,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         if (password_verify($password, $user['password'])) {
             $_SESSION['user_id'] = $user['id'];
             $_SESSION['user_name'] = htmlspecialchars($user['name']);
-            $_SESSION['roles'] = explode(',', $user['roles']);
+            $_SESSION['roles'] = explode(',', $user['role']);
             //role base redirection
             if (isstaff()){
                 header('Location: admin/dashboard.php');
@@ -37,7 +37,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
            //when click  checkout page 
             
         } else {
-            $redirect=$_GET['redirect'] ?? 'customer/dashboard.php';
+            $redirect=$_GET['redirect'] ?? 'index.php';
             header("Location: ".$redirect);
             exit();
         }

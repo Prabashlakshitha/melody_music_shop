@@ -42,8 +42,8 @@ $page_title = "Melody - Master";
         <?php
         $cartCount = 0;
         if (!empty($_SESSION['cart'])) {
-            foreach ($_SESSION['cart'] as $item) {
-                $cartCount += $item['qty'];
+            foreach ($_SESSION['cart'] as $id=>$qty) {
+                $cartCount += $qty;
             }
         }
         ?>
@@ -62,10 +62,10 @@ $page_title = "Melody - Master";
                         <li><hr style="border-color:#333;margin:4px 0;"></li>
                         <li><a href="admin/dashboard.php">Admin Panel</a></li>
                     <?php endif; ?>
-                    <li><hr style="border-color:#333;margin:4px 0;"></li>
-                    <li><a href="logout.php">Logout</a></li>
+                    
                 </ul>
             </div>
+            <a href="logout.php" class="btn-primary">Logout</a>
         <?php else: ?>
             <a href="login.php"    class="btn-outline">Login</a>
             <a href="register.php" class="btn-primary">Register</a>

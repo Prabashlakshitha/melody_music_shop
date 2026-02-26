@@ -64,7 +64,7 @@ if (isset($_GET['remove'])) {
                     <?php foreach ($cartItems as $item): ?>
                         <tr>
                             <td><?= htmlspecialchars($item['name']) ?></td>
-                            <td>$<?= number_format($item['price'], 2) ?></td>
+                            <td>£<?= number_format($item['price'], 2) ?></td>
                             <td>
     <input type="number" value="<?= $item['qty'] ?>" min="1" class="qty-input">
 </td>
