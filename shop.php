@@ -1,12 +1,14 @@
 <?php
-require __DIR__ . '/includes/functions.php';
+require __DIR__ . '/function.php';
 include __DIR__ . '/includes/header.php';
+require_once __DIR__ . '/config.php';
 
 $db = db_connect();
 
 //header category id  and index page category id
 
-$cat_id = isset($_GET['category_id']) ? (int)$_GET['category_id'] : (isset($_GET['id']) ? (int)$_GET['id'] : 0);
+$cat_id = isset($_GET['cat']) ? (int)$_GET['cat'] : 0;
+$categoryIds = [$cat_id]; // Start with the selected category itself
 
 
 if ($cat_id > 0) {
@@ -57,7 +59,8 @@ if ($cat_id > 0) {
     <title>Shop | Melody Masters</title>
     <link rel="stylesheet" href="style/shop.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" hre="style/home.css">
+    <link rel="stylesheet" href="style/home.css">
+    <link rel="stylesheet" href="style/shop.css">
 </head>
 <body>
     <div class="shop_container ">

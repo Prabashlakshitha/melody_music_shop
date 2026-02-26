@@ -1,6 +1,6 @@
 <?php
 require_once __DIR__ . '/config.php';
-require_once __DIR__ . '/functions.php';
+require_once __DIR__ . '/function.php';
 include __DIR__ . '/includes/header.php';
 
 $db=db_connect();
@@ -19,6 +19,7 @@ $categories = $db->query("SELECT * FROM categories where parent_id IS NULL");
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style/home.css">
     
     </head>
     <body>
@@ -39,11 +40,11 @@ $categories = $db->query("SELECT * FROM categories where parent_id IS NULL");
             <?php 
             $icons=[
                '<i class="fa-solid fa-guitar"></i>',
-                '<i class="fa-solid fa-piano-keyboard"></i>',
+                '<i class="fa-solid fa-keyboard"></i>',
                 '<i class="fa-solid fa-drum"></i>',
-                '<i class="fa-solid fa-flute"></i>',
-                '<i class="fa-solid fa-violin"></i>',
-                '<i class="fa-solid fa-speaker"></i>',
+                '<i class="fa-solid fa-radio"></i>',
+                '<i class="fa-solid fa-lines-leaning"></i>',
+                '<i class="fa-solid fa-headphones"></i>',
                 '<i class="fa-solid fa-music"></i>'
                 
             ];
@@ -56,8 +57,9 @@ $categories = $db->query("SELECT * FROM categories where parent_id IS NULL");
                 <div class="category-item">
                     <a href="shop.php?cat=<?= $cat['id'] ?>">
                         <div class="cat-icon"><?=$caticon?></div>
-                        <div clas="cat-name"><?= htmlspecialchars($cat['name']) ?></div>
+                        <div class="cat-name"><?= htmlspecialchars($cat['name']) ?></div>
                         </a>
+                </div>
                         <?php
                         $i++;
                        
@@ -66,7 +68,7 @@ $categories = $db->query("SELECT * FROM categories where parent_id IS NULL");
 
                         ?>
 
-                </div>
+               
 
                 </div>
             

@@ -1,6 +1,6 @@
 <?php
 require_once __DIR__ . '/config.php';
-require_once __DIR__ . '/functions.php';
+require_once __DIR__ . '/function.php';
 
 // check the user is loged in or not
 $user = current_user(); 
@@ -12,7 +12,7 @@ if ($user) {
 $error = '';
 
 //get the form data and validate
-if($_SERVER['REQUEST METHOD']===  'POST'){
+if($_SERVER['REQUEST_METHOD']===  'POST'){
     $name= trim($_POST['name']);
     $email= trim($_POST['email']);
     $password= $_POST['password'];
@@ -105,6 +105,7 @@ if($_SERVER['REQUEST METHOD']===  'POST'){
         <label for="city">City:</label>
         <input type="text" id="city" name="city" required>
     </div>
+    <button type="submit" class="btn-primary">Register</button>
 
 </form>
 </div>

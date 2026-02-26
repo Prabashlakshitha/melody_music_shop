@@ -1,6 +1,6 @@
 <?php 
-require_once __DIR__ . '/../config.php';
-require_once __DIR__ . '/../functions.php';
+//require_once __DIR__ . '/../config.php';
+//require_once __DIR__ . '/../functions.php';
 
 $page_title = "Melody - Master";
 ?>
@@ -9,9 +9,9 @@ $page_title = "Melody - Master";
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?= htmlspecialchars($pageTitle) ?> | Melody Masters</title>
+    <title><?= htmlspecialchars($page_title) ?> | Melody Masters</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="style/style.css">
 </head>
 <body>
 
