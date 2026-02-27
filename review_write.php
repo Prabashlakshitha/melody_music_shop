@@ -25,6 +25,7 @@ if ($user_data) {
                 <title>Checkout - Melody Masters</title>
                 <link rel="stylesheet" href="style/review.css">
             </head>
+            <body>
         <form action="save_review.php" method="POST" class="review-box">
             <h3>Write a Review</h3>
             
@@ -49,6 +50,7 @@ if ($user_data) {
 
             <button type="submit" class="btn-submit">Submit Review</button>
         </form>
+        </body>
         </html>
         <?php
     } else {
