@@ -1,325 +1,96 @@
-
-
-/*
-   RESET — just for navbar area
-*/
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: 'DM Sans', 'Segoe UI', sans-serif;
-    background: #0D0D0D;
-    color: #E8E8E8;
+  background-color: #f0f4f8;
+  font-family: Georgia, serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
 }
 
-a {
-    text-decoration: none;
+.review-box {
+  background-color: #ffffff;
+  border: 2px solid #b0c4de;
+  border-radius: 10px;
+  padding: 30px;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* 
-   .navbar
-   The full width bar stuck to the top
-*/
-.navbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 2rem;
-    height: 65px;
-    background: #0D0D0D;
-    border-bottom: 1px solid #2E2E2E;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    gap: 2rem;
+.review-box h3 {
+  text-align: center;
+  color: #2c3e6b;
+  font-size: 22px;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #b0c4de;
+  padding-bottom: 10px;
 }
 
-/* 
-   .nav-logo
-   The Melody Masters brand on the left
-*/
-.nav-logo {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    font-family: 'Playfair Display', serif;
-    font-size: 1.4rem;
-    font-weight: 900;
-    color: #E8E8E8;
-    white-space: nowrap;
+.field {
+  margin-bottom: 18px;
 }
 
-.nav-logo em {
-    color: #C9A84C;
-    font-style: normal;
+.field label {
+  display: block;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 6px;
+  font-size: 15px;
 }
 
-/* 
-   .logo-icon
-   The music note symbol next to the brand name
-*/
-.logo-icon {
-    font-size: 1.5rem;
-    color: #C9A84C;
+.field select,
+.field textarea {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid #aaa;
+  border-radius: 6px;
+  font-size: 14px;
+  font-family: Georgia, serif;
+  background-color: #fafafa;
+  color: #333;
+  outline: none;
+  transition: border-color 0.2s;
 }
 
-/*
-   .nav-links
-   The middle navigation list — Home, Shop, Categories
- */
-.nav-links {
-    display: flex;
-    list-style: none;
-    align-items: center;
-    gap: 2rem;
-    margin: 0;
-    padding: 0;
+.field select:focus,
+.field textarea:focus {
+  border-color: #2c3e6b;
+  background-color: #fff;
 }
 
-.nav-links li {
-    position: relative; /* needed for dropdown positioning */
+.field textarea {
+  resize: vertical;
 }
 
-.nav-links a {
-    color: #888;
-    font-size: 0.9rem;
-    font-weight: 500;
-    letter-spacing: 0.02em;
-    transition: color 0.2s;
+.btn-submit {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #2c3e6b;
+  color: white;
+  font-size: 16px;
+  font-family: Georgia, serif;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.2s;
 }
 
-.nav-links a:hover {
-    color: #C9A84C;
+.btn-submit:hover {
+  background-color: #1a2a50;
 }
 
-/* 
-   .dropdown
-   The Categories item that has a submenu
- */
-.dropdown {
-    position: relative;
-}
-
-/* 
-   .dropdown-menu
-   The submenu list that appears on hover
- */
-.dropdown-menu {
-    display: none;                  /* hidden by default */
-    position: absolute;
-    top: calc(100% + 14px);        /* sits just below the nav link */
-    left: 0;
-    background: #1F1F1F;
-    border: 1px solid #2E2E2E;
-    border-radius: 8px;
-    min-width: 200px;
-    list-style: none;
-    padding: 6px 0;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
-    z-index: 999;
-}
-
-/* Show dropdown when hovering the parent li */
-.dropdown:hover .dropdown-menu {
-    display: block;
-}
-
-.dropdown-menu li a {
-    display: block;
-    padding: 9px 16px;
-    color: #E8E8E8;
-    font-size: 0.87rem;
-    transition: background 0.15s, color 0.15s;
-}
-
-.dropdown-menu li a:hover {
-    background: #2A2A2A;
-    color: #C9A84C;
-}
-
-/* 
-   .nav-actions
-   Right side — cart button + login/account buttons
- */
-.nav-actions {
-    display: flex;
-    align-items: center;
-    gap: 0.8rem;
-}
-
-/*
-   .cart-btn
-   The shopping cart icon button with item count
- */
-.cart-btn {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    padding: 7px 14px;
-    background: #1F1F1F;
-    border: 1px solid #2E2E2E;
-    border-radius: 100px;
-    color: #E8E8E8;
-    font-size: 0.9rem;
-    transition: border-color 0.2s, color 0.2s;
-}
-
-.cart-btn:hover {
-    border-color: #C9A84C;
-    color: #C9A84C;
-}
-
-/*
-   .cart-count
-   The number badge inside the cart button
- */
-.cart-count {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 20px;
-    height: 20px;
-    background: #C9A84C;
-    color: #000;
-    border-radius: 50%;
-    font-size: 0.72rem;
-    font-weight: 700;
-}
-
-/* 
-   .btn-outline
-   Used for Login button and account dropdown trigger
-*/
-.btn-outline {
-    display: inline-block;
-    padding: 8px 18px;
-    border: 1px solid #2E2E2E;
-    border-radius: 100px;
-    color: #E8E8E8;
-    font-size: 0.87rem;
-    font-weight: 500;
-    background: transparent;
-    cursor: pointer;
-    transition: border-color 0.2s, color 0.2s;
-}
-
-.btn-outline:hover {
-    border-color: #C9A84C;
-    color: #C9A84C;
-}
-
-/* 
-   .btn-primary
-   Used for Register button — filled gold button
- */
-.btn-primary {
-    display: inline-block;
-    padding: 8px 18px;
-    background: #C9A84C;
-    color: #000;
-    border: none;
-    border-radius: 100px;
-    font-size: 0.87rem;
-    font-weight: 700;
-    cursor: pointer;
-    transition: background 0.2s;
-}
-
-.btn-primary:hover {
-    background: #E8C97A;
-}
-
-/* 
-   .mobile-menu-btn
-   Hamburger icon — only visible on small screens
- */
-.mobile-menu-btn {
-    display: none;          /* hidden on desktop */
-    background: none;
-    border: none;
-    color: #E8E8E8;
-    font-size: 1.4rem;
-    cursor: pointer;
-    padding: 4px 8px;
-}
-
-/* -----------------------------------------------
-   RESPONSIVE — mobile screens under 768px
------------------------------------------------ */
-@media (max-width: 768px) {
-
-    .navbar {
-        flex-wrap: wrap;
-        height: auto;
-        padding: 1rem;
-        gap: 1rem;
-    }
-
-    /* Hide nav links and actions on mobile by default */
-    .nav-links {
-        display: none;
-        width: 100%;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 0;
-        border-top: 1px solid #2E2E2E;
-        padding-top: 0.5rem;
-    }
-
-    /* Show when toggled by hamburger button */
-    .nav-links.open {
-        display: flex;
-    }
-
-    .nav-links li {
-        width: 100%;
-    }
-
-    .nav-links a {
-        display: block;
-        padding: 10px 0;
-        font-size: 1rem;
-    }
-
-    .dropdown-menu {
-        position: static;   /* on mobile dropdown is inline not floating */
-        border: none;
-        background: #161616;
-        padding-left: 1rem;
-        box-shadow: none;
-    }
-
-    .dropdown:hover .dropdown-menu {
-        display: none;      /* hover does not work on mobile */
-    }
-
-    .dropdown.open .dropdown-menu {
-        display: block;     /* controlled by JS click instead */
-    }
-
-    .nav-actions {
-        display: none;
-        width: 100%;
-        flex-direction: column;
-        align-items: stretch;
-        gap: 0.5rem;
-    }
-
-    .nav-actions.open {
-        display: flex;
-    }
-
-    .btn-outline,
-    .btn-primary {
-        text-align: center;
-        width: 100%;
-        border-radius: 6px;
-    }
-
-    .mobile-menu-btn {
-        display: block;     /* show hamburger on mobile */
-    }
+p {
+  text-align: center;
+  color: #c0392b;
+  font-size: 15px;
+  margin-top: 20px;
 }

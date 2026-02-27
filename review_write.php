@@ -23,7 +23,7 @@ if ($user_data) {
             <head>
                 <meta charset="UTF-8">
                 <title>Checkout - Melody Masters</title>
-                <link rel="stylesheet" href="review.css">
+                <link rel="stylesheet" href="style/review.css">
             </head>
         <form action="save_review.php" method="POST" class="review-box">
             <h3>Write a Review</h3>
