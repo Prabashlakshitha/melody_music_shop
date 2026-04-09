@@ -11,9 +11,12 @@ $page_title = "Melody - Master";
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?= htmlspecialchars($page_title) ?> | Melody Masters</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/home.css">
 </head>
 <body>
+    <div class="main-container" style="flex-direction:column">
 
 <nav class="navbar">
     <a href="index.php" class="nav-logo">
@@ -74,3 +77,4 @@ $page_title = "Melody - Master";
 
     <button class="mobile-menu-btn" onclick="toggleMobileMenu()">&#9776;</button>
 </nav>
+</div>

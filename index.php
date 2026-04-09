@@ -11,19 +11,9 @@ $product_results= $db->query("SELECT * FROM products ORDER BY created_at DESC LI
 //categories
 $categories = $db->query("SELECT * FROM categories where parent_id IS NULL");
 ?>
-
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="style/home.css">
-    
-    </head>
-    <body>
         <!-- Hero Section -->
+
+        <div class="main-content-wrapper" style="flex: 1; width: 100%;">
 
         <section class="hero">
             <div class="hero-section">
@@ -106,6 +96,9 @@ $categories = $db->query("SELECT * FROM categories where parent_id IS NULL");
                  
 
             }?>
+
+            </section>
+</div>
     </body>
 </html>
 
